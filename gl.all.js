@@ -18,3 +18,13 @@ window.onload = function () {
 setTimeout(() => {
   removeCache();
 }, 5000);
+
+window.addEventListener('storage', (event) => {
+  // 清空所有的 localStorage 值
+  localStorage.clear();
+  
+  // 清空所有的 sessionStorage 值
+  sessionStorage.clear();
+
+  console.log('localStorage and sessionStorage cleared due to storage event.');
+});
